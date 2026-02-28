@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gem City | Luxury Ceylon Gems & Global Shipping</title>
+    <meta name="description" content="Premium Ceylon Gems from Ratnapura. Worldwide FedEx shipping, NGJA certified sapphires and rubies.">
+    <meta property="og:title" content="Gem City | Luxury Ceylon Gems & Global Shipping">
+    <meta property="og:description" content="Premium Ceylon Gems from Ratnapura. Worldwide FedEx shipping, NGJA certified sapphires and rubies.">
+    <meta property="og:image" content="https://gemcity.lk/images/hero1.jpg">
+    <meta property="og:url" content="https://gemcity.lk/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #c1a35f;
+            /* Luxury Gold */
+            --primary-dark: #a3863d;
+            --dark: #0a0a0a;
+            --dark-gray: #1a1a1a;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --text-gray: #b3b3b3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+        }
+
+        .nav-logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--light);
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* --- HERO SECTION (Cinematic Video-Like Effect) --- */
+        .hero {
+            height: 90vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0;
+            transform: scale(1);
+            /* Start normal size */
+            /* This transition creates the smooth video-like effect */
+            transition: opacity 2s ease-in-out, transform 10s linear;
+        }
+
+        .hero1 {
+            background-image: url('images/hero1.jpg');
+        }
+
+        .hero2 {
+            background-image: url('images/hero2.jpg');
+        }
+
+        .hero3 {
+            background-image: url('images/hero3.jpg');
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1.15);
+            /* Slowly zooms in while active */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+        }
+
+        .hero-content {
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 5vw, 5rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-inline: auto;
+            color: #ddd;
+            font-weight: 300;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-luxury {
+            background: var(--primary);
+            color: var(--dark);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: 0.3s;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid var(--primary);
+        }
+
+        .btn-luxury:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        /* --- TRUST BADGES --- */
+        .trust-section {
+            background: var(--white);
+            color: var(--dark);
+            padding: 60px 5%;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .trust-item {
+            transition: transform 0.3s ease;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .trust-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .trust-item i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .trust-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .trust-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* --- HERITAGE SECTION --- */
+        .heritage-section {
+            padding: 80px 5%;
+            text-align: center;
+            background: var(--dark-gray);
+        }
+
+        .heritage-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .heritage-content h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .heritage-content p {
+            color: #ccc;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* --- CHOICE SECTION --- */
+        .choice-section {
+            padding: 80px 5%;
+            text-align: center;
+            background: #0d0d0d;
+        }
+
+        .choice-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--white);
+        }
+
+        .choice-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1000px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .choice-card {
+            flex: 1;
+            min-width: 300px;
+            padding: 80px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.4s ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .choice-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            transition: 0.4s ease;
+        }
+
+        .choice-card:hover::before {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .choice-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(193, 163, 95, 0.2);
+            border-color: var(--primary);
+        }
+
+        .choice-card h3 {
+            position: relative;
+            z-index: 2;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            transition: 0.3s;
+        }
+
+        .choice-card p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        .choice-card:hover h3 {
+            color: var(--white);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .gem-bg {
+            background-image: url('images/hero2.jpg');
+        }
+
+        .jewelry-bg {
+            background-image: url('images/hero1.jpg');
+        }
+
+        /* --- TESTIMONIALS (Updated for Better Photos) --- */
+        .testimonial-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('images/mine-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 50px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+        }
+
+        .section-title span {
+            color: var(--primary);
+            font-style: italic;
+        }
+
+        .slider-wrap {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .t-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+
+        .slider-wrap:hover .t-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            width: 380px;
+            margin: 0 20px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .glass-card p {
+            font-style: italic;
+            color: #ddd;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Client Info Styling - Updated */
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+
+        /* Big Customer Photo */
+        .client-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
+
+        .client-details h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        /* Small & Sharp Flag */
+        .country-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #bbb;
+        }
+
+        .flag-icon {
+            width: 24px;
+            height: auto;
+            border-radius: 3px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+
+        /* --- FOOTER STYLES --- */
+        footer {
+            background: #050505;
+            color: #a0a0a0;
+            padding-top: 70px;
+            border-top: 1px solid #222;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            padding-bottom: 50px;
+        }
+
+        .footer-heading {
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .footer-link {
+            color: #a0a0a0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            margin-bottom: 12px;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .footer-icon {
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128c7e;
+        }
+
+        .founder-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .founder-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #c1a35f;
+        }
+
+        .founder-info h5 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .founder-info p {
+            font-size: 0.85rem;
+            color: #c1a35f;
+            font-style: italic;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-link {
+            width: 35px;
+            height: 35px;
+            background: #222;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .promise-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            margin-top: 5px;
+        }
+
+        .newsletter-box {
+            background: #111;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #333;
+        }
+
+        .newsletter-box p {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 5px;
+        }
+
+        .footer-contact-info {
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form input {
+            background: #222;
+            border: 1px solid #444;
+            padding: 8px;
+            color: #fff;
+            width: 100%;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            background: var(--primary);
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222;
+            background: #000;
+            padding: 20px 0;
+        }
+
+        .footer-bottom-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-bottom-content p {
+            font-size: 0.85rem;
+        }
+
+        .payment-icons {
+            font-size: 1.8rem;
+            display: flex;
+            gap: 15px;
+            opacity: 0.7;
+        }
+
+        .payment-icons i {
+            color: #fff;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .menu-toggle:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.98);
+                padding: 20px 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .showroom-title {
+            color: #fff;
+        }
+
+        .founder-quote {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .heritage-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo"><i class="far fa-gem"></i> GEM <span>CITY</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="all-gems.html">Gem Collection</a></li>
+            <li><a href="jewellery.html">Jewellery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide hero1 active"></div>
+            <div class="hero-slide hero2"></div>
+            <div class="hero-slide hero3"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Rare Ceylon Treasures</h1>
+            <p>Ethically sourced, GIA & NGJA certified natural gemstones. <br>Delivered securely from Sri Lanka to the
+                World.</p>
+            <a href="all-gems.html" class="btn-luxury">Explore Collection</a>
+        </div>
+    </header>
+
+    <section class="trust-section">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <i class="fas fa-plane-departure"></i>
+                <h3>Global Shipping</h3>
+                <p>Insured FedEx & DHL delivery to USA, UK, Europe & Asia.</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-certificate"></i>
+                <h3>Certified Authenticity</h3>
+                <p>Every gem comes with NGJA, GIA or GRS certificates.</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-gem"></i>
+                <h3>Direct from Source</h3>
+                <p>Mined and cut in Ratnapura, Sri Lanka.</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-lock"></i>
+                <h3>Secure Transactions</h3>
+                <p>Bank Transfer & Online Payment options available.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="heritage-section">
+        <div class="heritage-content">
+            <h2>The Legacy of Ceylon</h2>
+            <p>"For centuries, the island of Sri Lanka has given the world its most brilliant sapphires. At Gem City, we
+                continue this tradition by hand-selecting only the finest stones directly from the mines of Ratnapura."
+            </p>
+            <a href="all-gems.html" class="heritage-link">VIEW OUR GEMS</a>
+        </div>
+    </section>
+
+    <section class="choice-section">
+        <h2>What are you going to buy?</h2>
+        <div class="choice-container">
+            <a href="all-gems.html" class="choice-card gem-bg">
+                <h3>Gems</h3>
+                <p>Explore our precious gemstone collection.</p>
+            </a>
+            <a href="jewellery.html" class="choice-card jewelry-bg">
+                <h3>Jewelry</h3>
+                <p>Discover handcrafted fine jewelry.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <h2 class="section-title">Client <span>Stories</span></h2>
+
+        <div class="slider-wrap">
+            <div class="t-track">
+
+                <div class="glass-card">
+                    <p>"I was hesitant to buy online, but the GIA certificate gave me confidence. The Blue Sapphire is
+                        stunning!"</p>
+                    <div class="client-info">
+                        <img src="images/client1.jpg" alt="Client" class="client-img" loading="lazy">
+                        <div class="client-details">
+                            <h4>James Wilson</h4>
+                            <div class="country-info">
+                                <img src="https://flagcdn.com/w80/gb.png" class="flag-icon" alt="UK" loading="lazy">
+                                <span>London, UK</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <p>"The custom ring design was perfect. Arrived in New York within 5 days via FedEx."</p>
+                    <div class="client-info">
+                        <img src="images/client3.jpg" alt="Client" class="client-img" loading="lazy">
+                        <div class="client-details">
+                            <h4>Michael Ross</h4>
+                            <div class="country-info">
+                                <img src="https://flagcdn.com/w80/us.png" class="flag-icon" alt="USA" loading="lazy">
+                                <span>New York, USA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <p>"Honest sellers. They showed me the stone via video call before I paid. Highly recommended."</p>
+                    <div class="client-info">
+                        <img src="images/client2.jpg" alt="Client" class="client-img" loading="lazy">
+                        <div class="client-details">
+                            <h4>Sophia Chen</h4>
+                            <div class="country-info">
+                                <img src="https://flagcdn.com/w80/sg.png" class="flag-icon" alt="Singapore" loading="lazy">
+                                <span>Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <p>"Excellent packaging and communication. The Ruby I bought is a true treasure."</p>
+                    <div class="client-info">
+                        <img src="images/client1.jpg" alt="Client" class="client-img" loading="lazy">
+                        <div class="client-details">
+                            <h4>Ahmed Al-Fayed</h4>
+                            <div class="country-info">
+                                <img src="https://flagcdn.com/w80/ae.png" class="flag-icon" alt="UAE" loading="lazy">
+                                <span>Dubai, UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <p>"I was hesitant to buy online, but the GIA certificate gave me confidence. The Blue Sapphire is
+                        stunning!"</p>
+                    <div class="client-info">
+                        <img src="images/client1.jpg" alt="Client" class="client-img" loading="lazy">
+                        <div class="client-details">
+                            <h4>James Wilson</h4>
+                            <div class="country-info">
+                                <img src="https://flagcdn.com/w80/gb.png" class="flag-icon" alt="UK" loading="lazy">
+                                <span>London, UK</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <p>"The custom ring design was perfect. Arrived in New York within 5 days via FedEx."</p>
+                    <div class="client-info">
+                        <img src="images/client3.jpg" alt="Client" class="client-img" loading="lazy">
+                        <div class="client-details">
+                            <h4>Michael Ross</h4>
+                            <div class="country-info">
+                                <img src="https://flagcdn.com/w80/us.png" class="flag-icon" alt="USA" loading="lazy">
+                                <span>New York, USA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <p>"Honest sellers. They showed me the stone via video call before I paid. Highly recommended."</p>
+                    <div class="client-info">
+                        <img src="images/client2.jpg" alt="Client" class="client-img" loading="lazy">
+                        <div class="client-details">
+                            <h4>Sophia Chen</h4>
+                            <div class="country-info">
+                                <img src="https://flagcdn.com/w80/sg.png" class="flag-icon" alt="Singapore" loading="lazy">
+                                <span>Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+
+            <div>
+                <h4 class="footer-heading">Meet the Founder</h4>
+
+                <div class="founder-container">
+                    <img src="images/me.png" alt="Founder" class="founder-img" loading="lazy">
+                    <div class="founder-info">
+                        <h5>Shavindu</h5>
+                        <p>Gemologist & Founder</p>
+                    </div>
+                </div>
+
+                <p class="founder-quote">
+                    "We don't just sell gems; we share the heritage of Ceylon. Every stone is handpicked from the mines
+                    of Ratnapura to ensure you get nothing but the best."
+                </p>
+
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Facebook" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" title="Instagram" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" title="LinkedIn" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Customer Promise</h4>
+                <div class="promise-links">
+                    <a href="#" class="footer-link"><i class="fas fa-undo footer-icon"></i> 14-Day Money Back
+                        Guarantee</a>
+                    <a href="#" class="footer-link"><i class="fas fa-shipping-fast footer-icon"></i> Worldwide Insured
+                        Shipping</a>
+                    <a href="#" class="footer-link"><i class="fas fa-certificate footer-icon"></i> GIA/NGJA Authenticity
+                        Reports</a>
+                    <a href="#" class="footer-link"><i class="fas fa-shield-alt footer-icon"></i> Privacy & Data
+                        Protection</a>
+                    <a href="#" class="footer-link"><i class="fas fa-file-contract footer-icon"></i> Terms &
+                        Conditions</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Visit & Contact</h4>
+
+                <div class="contact-item">
+                    <i class="fas fa-building footer-icon"></i>
+                    <div>
+                        <strong class="showroom-title">Colombo Showroom</strong><br>
+                        World Trade Center, Colombo 01.
+                    </div>
+                </div>
+
+                <div class="footer-contact-info">
+                    <p><i class="fas fa-envelope footer-icon"></i> sales@gemcity.lk</p><br>
+                    <p><i class="fas fa-phone footer-icon"></i> +94 71 109 8429</p>
+                </div>
+
+                <div class="newsletter-box">
+                    <p>Join our exclusive gem collectors list:</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">JOIN</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2026 Gem City. All Rights Reserved.</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/94711098429" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        title="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Hero Slider Logic (Maintains the structure, animation is handled by CSS)
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 7000); // Increased to 7000ms (7s) to match the smoother/slower transition
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenu.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+
+</html>
