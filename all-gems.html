@@ -14,7 +14,7 @@
     <meta property="og:title" content="Exclusive Ceylon Gem Collection | Gem City">
     <meta property="og:description"
         content="Explore our handpicked inventory of certified natural sapphires and rubies direct from Sri Lanka.">
-    <meta property="og:image" content="https://www.gemcity.com/images/hero4.jpg">
+    <meta property="og:image" content="https://www.gemcity.com/images/gemw/gem2.webp">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
@@ -140,7 +140,7 @@
 
         /* --- PAGE HEADER --- */
         .page-header {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('images/hero4.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('images/gemw/gem2.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -540,91 +540,126 @@
         <h1>Ceylon Gem Collection</h1>
         <p>Explore our handpicked inventory of certified natural sapphires and rubies.</p>
         <div class="filter-container">
-            <input type="text" id="searchInput" placeholder="Search gems by name..." onkeyup="searchItems()">
+            <input type="text" id="searchInput" placeholder="Search Ceylon gems..." onkeyup="searchItems()">
             <br>
-            <button class="filter-btn active" onclick="filterGems('all')">All Gems</button>
-            <button class="filter-btn" onclick="filterGems('blue-sapphire')">Blue Sapphire</button>
-            <button class="filter-btn" onclick="filterGems('ruby')">Ruby</button>
-            <button class="filter-btn" onclick="filterGems('yellow-sapphire')">Yellow Sapphire</button>
-            <button class="filter-btn" onclick="filterGems('spinel')">Spinel</button>
+            <button class="filter-btn active" onclick="filterGems('all')">All Ceylon Gems</button>
+            <button class="filter-btn" onclick="filterGems('blue-gems')">Blue Gems</button>
+            <button class="filter-btn" onclick="filterGems('red-pink-gems')">Red & Pink</button>
+            <button class="filter-btn" onclick="filterGems('yellow-orange-gems')">Yellow & Orange</button>
+            <button class="filter-btn" onclick="filterGems('green-gems')">Green Gems</button>
+            <button class="filter-btn" onclick="filterGems('special-gems')">Cat's Eye & Moonstone</button>
         </div>
     </header>
 
-    <div class="container">
-        <div class="product-grid">
+    <div class="container" id="main-gem-container">
 
-            <div class="product-card" data-category="blue-sapphire">
-                <div class="img-container" onclick="openGallery(this)"
-                    data-images='["images/gemw/gem1.webp", "images/gemw/gem1-side.webp", "images/gemw/gem1-cert.webp"]'>
-                    <img src="images/gemw/gem1.webp" alt="Blue Sapphire" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Royal Blue Sapphire</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Weight<br><strong>2.55 Ct</strong></span>
-                        <span>Shape<br><strong>Oval</strong></span>
-                        <span>Origin<br><strong>Ceylon</strong></span>
-                        <span>Cert<br><strong>GIA</strong></span>
+        <section class="gem-category-section" id="section-blue-gems">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Blue Gemstones (Sapphire & Spinel)</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="blue-gems">
+                    <div class="img-container" onclick="openGallery(this)"
+                        data-images='["images/gemw/gem1.webp", "images/gemw/gem1-side.webp", "images/gemw/gem1-cert.webp"]'>
+                        <img src="images/gemw/gem1.webp" alt="Blue Sapphire" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
                     </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    <div class="details">
+                        <h3>Royal Blue Sapphire</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Weight<br><strong>2.55 Ct</strong></span>
+                            <span>Shape<br><strong>Oval</strong></span>
+                            <span>Origin<br><strong>Ceylon</strong></span>
+                            <span>Cert<br><strong>GIA</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="product-card" data-category="ruby">
-                <div class="img-container" onclick="openGallery(this)"
-                    data-images='["images/gemw/gem2.webp", "images/gemw/gem2-side.webp", "images/gemw/gem2-cert.webp"]'>
-                    <img src="images/gemw/gem2.webp" alt="Ruby" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Pigeon Blood Ruby</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Weight<br><strong>1.80 Ct</strong></span>
-                        <span>Shape<br><strong>Cushion</strong></span>
-                        <span>Origin<br><strong>Mozambique</strong></span>
-                        <span>Cert<br><strong>GRS</strong></span>
+        <section class="gem-category-section" id="section-red-pink-gems">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Red & Pink Gemstones (Ruby & Spinel)</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="red-pink-gems">
+                    <div class="img-container" onclick="openGallery(this)"
+                        data-images='["images/gemw/gem2.webp", "images/gemw/gem2-side.webp", "images/gemw/gem2-cert.webp"]'>
+                        <img src="images/gemw/gem2.webp" alt="Ruby" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
                     </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    <div class="details">
+                        <h3>Pigeon Blood Ruby</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Weight<br><strong>1.80 Ct</strong></span>
+                            <span>Shape<br><strong>Cushion</strong></span>
+                            <span>Origin<br><strong>Mozambique</strong></span>
+                            <span>Cert<br><strong>GRS</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="red-pink-gems">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/gemw/gem4.webp"]'>
+                        <img src="images/gemw/gem4.webp" alt="Red Spinel" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Neon Red Spinel</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Weight<br><strong>1.20 Ct</strong></span>
+                            <span>Shape<br><strong>Oval</strong></span>
+                            <span>Origin<br><strong>Burma</strong></span>
+                            <span>Cert<br><strong>GIC</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="product-card" data-category="yellow-sapphire">
-                <div class="img-container" onclick="openGallery(this)"
-                    data-images='["images/gemw/gem3.webp", "images/gemw/gem3-side.webp", "images/gemw/gem3-cert.webp"]'>
-                    <img src="images/gemw/gem3.webp" alt="Yellow Sapphire" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Vivid Yellow Sapphire</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Weight<br><strong>3.10 Ct</strong></span>
-                        <span>Shape<br><strong>Round</strong></span>
-                        <span>Origin<br><strong>Ceylon</strong></span>
-                        <span>Cert<br><strong>NGJA</strong></span>
+        <section class="gem-category-section" id="section-yellow-orange-gems">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Yellow & Orange (Sapphire & Padparadscha)</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="yellow-orange-gems">
+                    <div class="img-container" onclick="openGallery(this)"
+                        data-images='["images/gemw/gem3.webp", "images/gemw/gem3-side.webp", "images/gemw/gem3-cert.webp"]'>
+                        <img src="images/gemw/gem3.webp" alt="Yellow Sapphire" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
                     </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    <div class="details">
+                        <h3>Vivid Yellow Sapphire</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Weight<br><strong>3.10 Ct</strong></span>
+                            <span>Shape<br><strong>Round</strong></span>
+                            <span>Origin<br><strong>Ceylon</strong></span>
+                            <span>Cert<br><strong>NGJA</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="product-card" data-category="spinel">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/gemw/gem4.webp"]'>
-                    <img src="images/gemw/gem4.webp" alt="Red Spinel" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Neon Red Spinel</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Weight<br><strong>1.20 Ct</strong></span>
-                        <span>Shape<br><strong>Oval</strong></span>
-                        <span>Origin<br><strong>Burma</strong></span>
-                        <span>Cert<br><strong>GIC</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
+        <section class="gem-category-section" id="section-green-gems">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Green Gemstones (Tourmaline & Sapphire)</h2>
+            <div class="product-grid">
             </div>
+        </section>
 
-        </div>
+        <section class="gem-category-section" id="section-special-gems">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Cat's Eye & Moonstones</h2>
+            <div class="product-grid">
+            </div>
+        </section>
+
     </div>
 
     <div class="lightbox" id="gallery-lightbox">
@@ -644,7 +679,7 @@
                 <h4 class="footer-heading">Meet the Founder</h4>
 
                 <div style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 20px;">
-                    <img src="images/me.png" alt="Founder"
+                    <img src="images/ui/me.png" alt="Founder"
                         style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #c1a35f;"
                         loading="lazy">
                     <div>
@@ -709,31 +744,45 @@
 
         function filterGems(category) {
             currentCategory = category;
-            const cards = document.querySelectorAll('.product-card');
+            const sections = document.querySelectorAll('.gem-category-section');
             const btns = document.querySelectorAll('.filter-btn');
             const searchVal = document.getElementById('searchInput').value.toLowerCase();
 
+            // Update active state on buttons
             btns.forEach(btn => {
-                if (btn.textContent.toLowerCase().includes(category.replace('-', ' ')) || (category === 'all' && btn.textContent.includes('All'))) {
+                if (btn.getAttribute('onclick').includes(`'${category}'`)) {
                     btn.classList.add('active');
                 } else {
                     btn.classList.remove('active');
                 }
             });
 
-            cards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                const title = card.querySelector('h3').innerText.toLowerCase();
+            // Filter cards and toggle section visibility
+            sections.forEach(section => {
+                const sectionCat = section.getAttribute('id').replace('section-', '');
+                const cards = section.querySelectorAll('.product-card');
+                let hasVisibleCards = false;
 
-                const matchesCategory = (category === 'all' || cardCategory === category);
-                const matchesSearch = title.includes(searchVal);
+                cards.forEach(card => {
+                    const title = card.querySelector('h3').innerText.toLowerCase();
+                    const matchesCategory = (category === 'all' || sectionCat === category);
+                    const matchesSearch = title.includes(searchVal);
 
-                if (matchesCategory && matchesSearch) {
-                    card.classList.remove('hide');
-                    card.classList.add('show');
+                    if (matchesCategory && matchesSearch) {
+                        card.classList.remove('hide');
+                        card.classList.add('show');
+                        hasVisibleCards = true;
+                    } else {
+                        card.classList.remove('show');
+                        card.classList.add('hide');
+                    }
+                });
+
+                // Hide entire section if no cards match
+                if (hasVisibleCards) {
+                    section.style.display = 'block';
                 } else {
-                    card.classList.remove('show');
-                    card.classList.add('hide');
+                    section.style.display = 'none';
                 }
             });
         }

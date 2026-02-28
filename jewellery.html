@@ -14,7 +14,7 @@
     <meta property="og:title" content="Handcrafted Fine Jewellery | Gem City">
     <meta property="og:description"
         content="Exquisite Gold & Silver designs embedded with precious Ceylon stones. View our custom rings and pendants.">
-    <meta property="og:image" content="https://www.gemcity.com/images/jewel-bg.jpg">
+    <meta property="og:image" content="https://www.gemcity.com/images/jewelleryw/jewelery crafting.jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
@@ -140,7 +140,7 @@
 
         /* --- PAGE HEADER --- */
         .page-header {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('images/jewel-bg.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('images/jewelleryw/jewelery crafting.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -540,415 +540,442 @@
         <h1>Handcrafted Jewellery</h1>
         <p>Exquisite Gold & Silver designs embedded with precious Ceylon stones.</p>
         <div class="filter-container">
-            <input type="text" id="searchInput" placeholder="Search jewellery by name..." onkeyup="searchItems()">
+            <input type="text" id="searchInput" placeholder="Search jewellery..." onkeyup="searchItems()">
             <br>
-            <button class="filter-btn active" onclick="filterItems('all')">All</button>
-            <button class="filter-btn" onclick="filterItems('rings')">Rings</button>
-            <button class="filter-btn" onclick="filterItems('earrings')">Earrings</button>
-            <button class="filter-btn" onclick="filterItems('pendant')">Pendants</button>
-            <button class="filter-btn" onclick="filterItems('nawarathna')">Nawarathna</button>
+            <button class="filter-btn active" onclick="filterJewellery('all')">All Jewellery</button>
+            <button class="filter-btn" onclick="filterJewellery('rings')">Rings</button>
+            <button class="filter-btn" onclick="filterJewellery('pendants')">Pendants</button>
+            <button class="filter-btn" onclick="filterJewellery('earrings')">Earrings</button>
+            <button class="filter-btn" onclick="filterJewellery('nawarathna')">Nawarathna</button>
         </div>
     </header>
 
-    <div class="container">
-        <div class="product-grid">
+    <div class="container" id="main-jewellery-container">
 
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)"
-                    data-images='["images/jewelleryw/ring1.webp", "images/jewelleryw/ring1-side.webp", "images/jewelleryw/ring1-box.webp"]'>
-                    <img src="images/jewelleryw/ring1.webp" alt="Blue Sapphire Ring" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Blue Sapphire Ring</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>18K Gold</strong></span>
-                        <span>Gem<br><strong>Sapphire</strong></span>
-                        <span>Weight<br><strong>1.5ct</strong></span>
-                        <span>Sizing<br><strong>Adjustable</strong></span>
+        <section class="jewellery-category-section" id="section-rings">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Exquisite Rings</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)"
+                        data-images='["images/jewelleryw/ring1.webp", "images/jewelleryw/ring1-side.webp", "images/jewelleryw/ring1-box.webp"]'>
+                        <img src="images/jewelleryw/ring1.webp" alt="Blue Sapphire Ring" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
                     </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    <div class="details">
+                        <h3>Blue Sapphire Ring</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>18K Gold</strong></span>
+                            <span>Gem<br><strong>Sapphire</strong></span>
+                            <span>Weight<br><strong>1.5ct</strong></span>
+                            <span>Sizing<br><strong>Adjustable</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <!-- Premium Collection Rings -->
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/01.webp"]'>
+                        <img src="images/jewelleryw/01.webp" alt="Jewellery Piece 01" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 01</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/02.webp"]'>
+                        <img src="images/jewelleryw/02.webp" alt="Jewellery Piece 02" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 02</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <!-- ... other collection items ... -->
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/03.webp"]'>
+                        <img src="images/jewelleryw/03.webp" alt="Jewellery Piece 03" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 03</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/04.webp"]'>
+                        <img src="images/jewelleryw/04.webp" alt="Jewellery Piece 04" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 04</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/05.webp"]'>
+                        <img src="images/jewelleryw/05.webp" alt="Jewellery Piece 05" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 05</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/06.webp"]'>
+                        <img src="images/jewelleryw/06.webp" alt="Jewellery Piece 06" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 06</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/07.webp"]'>
+                        <img src="images/jewelleryw/07.webp" alt="Jewellery Piece 07" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 07</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/08.webp"]'>
+                        <img src="images/jewelleryw/08.webp" alt="Jewellery Piece 08" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 08</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/09.webp"]'>
+                        <img src="images/jewelleryw/09.webp" alt="Jewellery Piece 09" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 09</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/10.webp"]'>
+                        <img src="images/jewelleryw/10.webp" alt="Jewellery Piece 10" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 10</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/11.webp"]'>
+                        <img src="images/jewelleryw/11.webp" alt="Jewellery Piece 11" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 11</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/12.webp"]'>
+                        <img src="images/jewelleryw/12.webp" alt="Jewellery Piece 12" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 12</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/13.webp"]'>
+                        <img src="images/jewelleryw/13.webp" alt="Jewellery Piece 13" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 13</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/14.webp"]'>
+                        <img src="images/jewelleryw/14.webp" alt="Jewellery Piece 14" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 14</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/15.webp"]'>
+                        <img src="images/jewelleryw/15.webp" alt="Jewellery Piece 15" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 15</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/16.webp"]'>
+                        <img src="images/jewelleryw/16.webp" alt="Jewellery Piece 16" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 16</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/17.webp"]'>
+                        <img src="images/jewelleryw/17.webp" alt="Jewellery Piece 17" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 17</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/18.webp"]'>
+                        <img src="images/jewelleryw/18.webp" alt="Jewellery Piece 18" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 18</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/19.webp"]'>
+                        <img src="images/jewelleryw/19.webp" alt="Jewellery Piece 19" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 19</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/20.webp"]'>
+                        <img src="images/jewelleryw/20.webp" alt="Jewellery Piece 20" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 20</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/21.webp"]'>
+                        <img src="images/jewelleryw/21.webp" alt="Jewellery Piece 21" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 21</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/22.webp"]'>
+                        <img src="images/jewelleryw/22.webp" alt="Jewellery Piece 22" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 22</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="rings">
+                    <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/23.webp"]'>
+                        <img src="images/jewelleryw/23.webp" alt="Jewellery Piece 23" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
+                    </div>
+                    <div class="details">
+                        <h3>Premium Collection 23</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Custom</strong></span>
+                            <span>Gem<br><strong>Ceylon Gem</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="product-card" data-category="pendant">
-                <div class="img-container" onclick="openGallery(this)"
-                    data-images='["images/jewelleryw/necklace1.webp", "images/jewelleryw/necklace1-detail.webp", "images/jewelleryw/necklace1-wear.webp"]'>
-                    <img src="images/jewelleryw/necklace1.webp" alt="Ruby Heart Pendant" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Ruby Heart Pendant</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Silver</strong></span>
-                        <span>Gem<br><strong>Ruby</strong></span>
-                        <span>Design<br><strong>Modern</strong></span>
-                        <span>Sizing<br><strong>18 Inch</strong></span>
+        <section class="jewellery-category-section" id="section-pendants">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Pendants & Necklaces</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="pendants">
+                    <div class="img-container" onclick="openGallery(this)"
+                        data-images='["images/jewelleryw/necklace1.webp", "images/jewelleryw/necklace1-detail.webp", "images/jewelleryw/necklace1-wear.webp"]'>
+                        <img src="images/jewelleryw/necklace1.webp" alt="Ruby Heart Pendant" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
                     </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    <div class="details">
+                        <h3>Ruby Heart Pendant</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Silver</strong></span>
+                            <span>Gem<br><strong>Ruby</strong></span>
+                            <span>Design<br><strong>Modern</strong></span>
+                            <span>Sizing<br><strong>18 Inch</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="product-card" data-category="earrings">
-                <div class="img-container" onclick="openGallery(this)"
-                    data-images='["images/jewelleryw/earring1.webp", "images/jewelleryw/earring1-side.webp", "images/jewelleryw/earring1-box.webp"]'>
-                    <img src="images/jewelleryw/earring1.webp" alt="Gemstone Earrings" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Emerald Earrings</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Rose Gold</strong></span>
-                        <span>Gem<br><strong>Emerald</strong></span>
-                        <span>Style<br><strong>Studs</strong></span>
-                        <span>Fit<br><strong>Secure</strong></span>
+        <section class="jewellery-category-section" id="section-earrings">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Earrings</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="earrings">
+                    <div class="img-container" onclick="openGallery(this)"
+                        data-images='["images/jewelleryw/earring1.webp", "images/jewelleryw/earring1-side.webp", "images/jewelleryw/earring1-box.webp"]'>
+                        <img src="images/jewelleryw/earring1.webp" alt="Gemstone Earrings" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
                     </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    <div class="details">
+                        <h3>Emerald Earrings</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>Rose Gold</strong></span>
+                            <span>Gem<br><strong>Emerald</strong></span>
+                            <span>Style<br><strong>Studs</strong></span>
+                            <span>Fit<br><strong>Secure</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="product-card" data-category="nawarathna">
-                <div class="img-container" onclick="openGallery(this)"
-                    data-images='["images/jewelleryw/nawa1.webp", "images/jewelleryw/nawa1-side.webp", "images/jewelleryw/nawa1-box.webp"]'>
-                    <img src="images/jewelleryw/nawa1.webp" alt="Classic Nawarathna" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Classic Nawarathna</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>22K Gold</strong></span>
-                        <span>Stones<br><strong>9 Gems</strong></span>
-                        <span>Type<br><strong>Custom</strong></span>
-                        <span>Sizing<br><strong>On Demand</strong></span>
+        <section class="jewellery-category-section" id="section-nawarathna">
+            <h2
+                style="color: var(--primary); font-family: 'Playfair Display', serif; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                Nawarathna Collection</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="nawarathna">
+                    <div class="img-container" onclick="openGallery(this)"
+                        data-images='["images/jewelleryw/nawa1.webp", "images/jewelleryw/nawa1-side.webp", "images/jewelleryw/nawa1-box.webp"]'>
+                        <img src="images/jewelleryw/nawa1.webp" alt="Classic Nawarathna" loading="lazy">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
                     </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    <div class="details">
+                        <h3>Classic Nawarathna</h3>
+                        <div class="specs" style="flex-wrap: wrap;">
+                            <span>Metal<br><strong>22K Gold</strong></span>
+                            <span>Stones<br><strong>9 Gems</strong></span>
+                            <span>Type<br><strong>Custom</strong></span>
+                            <span>Sizing<br><strong>On Demand</strong></span>
+                        </div>
+                        <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/01.webp"]'>
-                    <img src="images/jewelleryw/01.webp" alt="Jewellery Piece 01" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 01</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/02.webp"]'>
-                    <img src="images/jewelleryw/02.webp" alt="Jewellery Piece 02" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 02</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/03.webp"]'>
-                    <img src="images/jewelleryw/03.webp" alt="Jewellery Piece 03" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 03</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/04.webp"]'>
-                    <img src="images/jewelleryw/04.webp" alt="Jewellery Piece 04" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 04</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/05.webp"]'>
-                    <img src="images/jewelleryw/05.webp" alt="Jewellery Piece 05" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 05</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/06.webp"]'>
-                    <img src="images/jewelleryw/06.webp" alt="Jewellery Piece 06" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 06</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/07.webp"]'>
-                    <img src="images/jewelleryw/07.webp" alt="Jewellery Piece 07" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 07</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/08.webp"]'>
-                    <img src="images/jewelleryw/08.webp" alt="Jewellery Piece 08" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 08</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/09.webp"]'>
-                    <img src="images/jewelleryw/09.webp" alt="Jewellery Piece 09" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 09</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/10.webp"]'>
-                    <img src="images/jewelleryw/10.webp" alt="Jewellery Piece 10" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 10</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/11.webp"]'>
-                    <img src="images/jewelleryw/11.webp" alt="Jewellery Piece 11" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 11</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/12.webp"]'>
-                    <img src="images/jewelleryw/12.webp" alt="Jewellery Piece 12" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 12</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/13.webp"]'>
-                    <img src="images/jewelleryw/13.webp" alt="Jewellery Piece 13" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 13</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/14.webp"]'>
-                    <img src="images/jewelleryw/14.webp" alt="Jewellery Piece 14" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 14</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/15.webp"]'>
-                    <img src="images/jewelleryw/15.webp" alt="Jewellery Piece 15" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 15</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/16.webp"]'>
-                    <img src="images/jewelleryw/16.webp" alt="Jewellery Piece 16" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 16</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/17.webp"]'>
-                    <img src="images/jewelleryw/17.webp" alt="Jewellery Piece 17" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 17</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/18.webp"]'>
-                    <img src="images/jewelleryw/18.webp" alt="Jewellery Piece 18" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 18</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/19.webp"]'>
-                    <img src="images/jewelleryw/19.webp" alt="Jewellery Piece 19" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 19</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/20.webp"]'>
-                    <img src="images/jewelleryw/20.webp" alt="Jewellery Piece 20" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 20</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/21.webp"]'>
-                    <img src="images/jewelleryw/21.webp" alt="Jewellery Piece 21" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 21</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/22.webp"]'>
-                    <img src="images/jewelleryw/22.webp" alt="Jewellery Piece 22" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 22</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="rings">
-                <div class="img-container" onclick="openGallery(this)" data-images='["images/jewelleryw/23.webp"]'>
-                    <img src="images/jewelleryw/23.webp" alt="Jewellery Piece 23" loading="lazy">
-                    <div class="gallery-icon"><i class="fas fa-expand"></i> View</div>
-                </div>
-                <div class="details">
-                    <h3>Premium Collection 23</h3>
-                    <div class="specs" style="flex-wrap: wrap;">
-                        <span>Metal<br><strong>Custom</strong></span>
-                        <span>Gem<br><strong>Ceylon Gem</strong></span>
-                    </div>
-                    <a href="#" class="buy-btn"><i class="fab fa-whatsapp"></i> Inquire Price</a>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="lightbox" id="gallery-lightbox">
@@ -968,7 +995,7 @@
                 <h4 class="footer-heading">Meet the Founder</h4>
 
                 <div style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 20px;">
-                    <img src="images/me.png" alt="Founder"
+                    <img src="images/ui/me.png" alt="Founder"
                         style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #c1a35f;"
                         loading="lazy">
                     <div>
@@ -1031,40 +1058,53 @@
         // --- FILTER SCRIPT ---
         let currentCategory = 'all';
 
-        function filterItems(category) {
+        function filterJewellery(category) {
             currentCategory = category;
-            const cards = document.querySelectorAll('.product-card');
+            const sections = document.querySelectorAll('.jewellery-category-section');
             const btns = document.querySelectorAll('.filter-btn');
             const searchVal = document.getElementById('searchInput').value.toLowerCase();
 
+            // Update active state on buttons
             btns.forEach(btn => {
-                const btnText = btn.textContent.toLowerCase();
-                if (btnText.includes(category) || (category === 'all' && btnText === 'all')) {
+                if (btn.getAttribute('onclick').includes(`'${category}'`)) {
                     btn.classList.add('active');
                 } else {
                     btn.classList.remove('active');
                 }
             });
 
-            cards.forEach(card => {
-                const cardCat = card.getAttribute('data-category');
-                const title = card.querySelector('h3').innerText.toLowerCase();
+            // Filter cards and toggle section visibility
+            sections.forEach(section => {
+                const sectionCat = section.getAttribute('id').replace('section-', '');
+                const cards = section.querySelectorAll('.product-card');
+                let hasVisibleCards = false;
 
-                const matchesCategory = (category === 'all' || cardCat === category);
-                const matchesSearch = title.includes(searchVal);
+                cards.forEach(card => {
+                    const title = card.querySelector('h3').innerText.toLowerCase();
+                    const matchesCategory = (category === 'all' || sectionCat === category);
+                    const matchesSearch = title.includes(searchVal);
 
-                if (matchesCategory && matchesSearch) {
-                    card.classList.remove('hide');
-                    card.classList.add('show');
+                    if (matchesCategory && matchesSearch) {
+                        card.classList.remove('hide');
+                        card.classList.add('show');
+                        hasVisibleCards = true;
+                    } else {
+                        card.classList.remove('show');
+                        card.classList.add('hide');
+                    }
+                });
+
+                // Hide entire section if no cards match
+                if (hasVisibleCards) {
+                    section.style.display = 'block';
                 } else {
-                    card.classList.remove('show');
-                    card.classList.add('hide');
+                    section.style.display = 'none';
                 }
             });
         }
 
         function searchItems() {
-            filterItems(currentCategory);
+            filterJewellery(currentCategory);
         }
 
         // --- LIGHTBOX SCRIPT ---
